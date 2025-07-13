@@ -1,0 +1,47 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+/*
+Instalando o prisma e o client:
+  npm install prisma @prisma/client
+
+Iniciar o prisma com o banco sqlite:
+  npx prisma init --datasource-provider sqlite
+
+fazer a migrate das models:
+  npx prisma migrate dev
+
+*/
+
+
+generator client {
+  provider = "prisma-client-js"
+  // output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./database.sqlite"
+  // url      = env("DATABASE_URL")
+}
+
+
+// codando a model
+model Produto {
+  id Int @id @default(autoincrement())
+  titulo String
+  preco Float
+  precoDesconto Float
+  precoParcelado Float
+  caracteristicas String
+  imagens String
+  estoque Int
+  freteGratis Boolean @default(false)
+  full Boolean @default(false)
+}
+
+model Pedido {
+  id Int @id @default(autoincrement())
+  valorTotal Float
+  itensVenda String
+}
