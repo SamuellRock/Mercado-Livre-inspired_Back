@@ -1,0 +1,15 @@
+{
+  "name": "mercado-livre-inspired_back",
+  "version": "1.0.0",
+  "description": "Projeto inspirado no mercado livre para recria logica do backend - Repositório do Back-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
